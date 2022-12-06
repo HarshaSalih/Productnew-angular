@@ -6,6 +6,19 @@ import { AppComponent } from './app.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { FormsModule } from '@angular/forms';
 import { ViewProductComponent } from './view-product/view-product.component';
+import { RouterModule, Routes } from '@angular/router';
+
+const myRoute:Routes=[
+  {
+    path:"",
+    component:AddProductComponent
+  },
+
+  {
+    path:"view",
+    component:ViewProductComponent
+  }
+]
 
 @NgModule({
   declarations: [
@@ -16,7 +29,8 @@ import { ViewProductComponent } from './view-product/view-product.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot(myRoute)
   ],
   providers: [],
   bootstrap: [AppComponent]
