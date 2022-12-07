@@ -21,7 +21,7 @@ export class AddProductComponent {
 
   readValues=()=>
   {
-    let data:any={"productCode":this.productCode,"ProductName":this.productName,"man_date":this.man_date,"exp_date":this.exp_date,"brand":this.brand,"price":this.price,"sellerName":this.sellerName,"distributorName":this.distributorName}
+    let data:any={"productCode":this.productCode,"productName":this.productName,"man_date":this.man_date,"exp_date":this.exp_date,"brand":this.brand,"price":this.price,"sellerName":this.sellerName,"distributorName":this.distributorName}
     console.log(data)
     this.api.addProduct(data).subscribe(
       (response:any)=>
